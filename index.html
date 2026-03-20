@@ -46,6 +46,10 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d0d0cc; }
+
+    /* ─── LOGO FIX ─── */
+    .logo-img { mix-blend-mode: multiply; }
 
     /* ─── LAYOUT ─── */
     .container { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
@@ -242,6 +246,10 @@
       .process-grid { grid-template-columns: 1fr !important; }
       .hero-cta-wrap { flex-direction: column !important; }
       .btn-primary, .btn-secondary { width: 100% !important; justify-content: center; }
+      h1 { font-size: 32px !important; line-height: 1.2 !important; text-align: center; }
+      .hero-subtitle { text-align: center; font-size: 16px !important; margin: 0 auto 32px !important; }
+      .section-label { margin-left: auto; margin-right: auto; display: flex; width: fit-content; }
+      .service-card { padding: 32px 24px !important; }
     }
   </style>
 </head>
@@ -250,7 +258,7 @@
 <!-- ══════════ NAV ══════════ -->
 <nav id="main-nav" role="navigation" aria-label="Navigasi utama">
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><img src="./logo_h.png" alt="Frostack" style="height:44px;width:auto;object-fit:contain;display:block;"></a>
+    <a href="#" class="nav-logo"><img src="./logo_h.png" alt="Frostack" class="logo-img" style="height:44px;width:auto;object-fit:contain;display:block;"></a>
 
     <div class="nav-links" role="list">
       <a href="#layanan"    class="nav-link" data-section="layanan"    role="listitem">Layanan</a>
@@ -709,7 +717,7 @@
     <div class="footer-grid" style="display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:36px;border-bottom:1px solid var(--border);margin-bottom:24px;">
 
       <div>
-        <img src="./logo_h.png" alt="Frostack" style="height:36px;width:auto;object-fit:contain;margin-bottom:12px;display:block;">
+        <img src="./logo_h.png" alt="Frostack" class="logo-img" style="height:36px;width:auto;object-fit:contain;margin-bottom:12px;display:block;">
         <p style="font-size:14px;color:var(--text-secondary);line-height:1.8;margin-bottom:20px;max-width:260px;">Kami bantu bisnis Indonesia tumbuh lewat teknologi — dari ide hingga produk yang benar-benar berjalan.</p>
         <div style="display:flex;gap:8px;">
           <a href="#" aria-label="Instagram" style="width:36px;height:36px;border:1px solid var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--text-tertiary);text-decoration:none;transition:color 0.15s,border-color 0.15s,background 0.15s;" onmouseenter="this.style.color='var(--accent)';this.style.borderColor='#b8e4ce';this.style.background='var(--accent-pale)'" onmouseleave="this.style.color='var(--text-tertiary)';this.style.borderColor='var(--border)';this.style.background='transparent'">
